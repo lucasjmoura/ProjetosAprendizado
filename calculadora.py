@@ -1,30 +1,34 @@
-def calculadora(valor1, valor2, operador):
-    valor1 = int(valor1)
-    valor2 = int(valor2)
-    operador = str(operador)
+import main
+def calcular(valor1, valor2, operador):
+    valor1 = valor1
+    valor2 = valor2
+    operador = operador
 
     if (operador == "+"):
         return valor1 + valor2
+    elif (operador == "-"):
+       return  valor1 - valor2
+    elif (operador == "x"):
+       return valor1 * valor2
+    elif (operador == "÷"):
+        return valor1 // valor2
     else:
-        if (operador == "-"):
-            return  valor1 - valor2
-        else:
-            if (operador == "x"):
-                return valor1 * valor2
-            else:
-                if (operador == "÷"):
-                    return valor1 // valor2
-                else:
-                    return "error"
-while True:
-    print("\nDigite o primeiro valor")
-    valor1 = int(input(""))
+        return "opa! Preciso de um operador"
 
-    print("Digite o segundo valor")
-    valor2 = int(input(""))
+def validadorDeValores (valor):
+    valor = valor
+    if (valor != int or valor != float):
+        return "Opa só aceitamos números"
+    else:
+        return valor
 
-    print("Digite o operador (x,+,-,÷)")
-    ope = str(input(""))
+def deNovo():
+   calculoDeNovo = input("Você gostaria de continuar calculando? \n ""S"" para SIM ""N"" para Não ")
 
-    resultado = calculadora(valor1,valor2,ope)
-    print("O resultado é ", resultado)
+   if calculoDeNovo.upper() == 'S':
+       valor1, valor2, operador = main.entradas()
+       calcular(valor1, valor2, operador)
+   elif calculoDeNovo.upper() == 'N':
+       print('Tudo bem até a proxima!')
+   else:
+       deNovo()
