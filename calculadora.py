@@ -9,7 +9,7 @@ class calculadora():
 		print ("Digite o primeiro valor ")
 		valor2 = calculadora.validarValor()
 		
-		print ("Escolha um dos operador (x,+,-,÷)")
+		print ("Escolha um dos operador: \nMulitplicação = * \nSoma = + \nSubtração = - \nDivisão = /")
 		operador = calculadora.validarOperador()
 		
 		calculadora.calcular(valor1,valor2,operador)
@@ -25,19 +25,19 @@ class calculadora():
 	    
 	    if (operador == "+"):
 	    	resultado = valor1 + valor2
-	    	return print (valor1," + ", valor2, "= " ,resultado)
+	    	return print (valor1," + ", valor2," = ",resultado)
 	    	#return calculadora.deNovo()
 	    elif (operador == "-"):
 	    	resultado = valor1- valor2
-	    	return print (valor1," - ",valor2, "= " ,resultado)
+	    	return print (valor1," - ",valor2," = ",resultado)
 	    	#return calculadora.deNovo()
 	    elif (operador == "*"):
 	    	resultado = valor1 * valor2
-	    	return print (valor1," * ",valor2, "= " ,resultado)
+	    	return print (valor1," * ",valor2," = ",resultado)
 	    	#return calculadora.deNovo()
-	    elif (operador == "÷"):
+	    else:
 	  	  resultado = valor1 // valor2
-	  	  return print (valor1," ÷ ",valor2, "= " ,resultado)
+	  	  return print (valor1," / ",valor2," = ",resultado)
 	  	  #return calculadora.deNovo()
 	
     #função que recebe os valores e os valida
@@ -51,7 +51,7 @@ class calculadora():
 	
     #função que recebe os operadores e os valida
 	def validarOperador():
-		operadores = ["*","-","÷","+"]
+		operadores = ["*","-","÷","/"]
 		try:
 			operador = input ("")
 			operadores.index(operador)
@@ -70,6 +70,8 @@ class calculadora():
 	   else:
 	   	print("Opa só aceitamos ""N"" ou ""S""")
 	   	return  calculadora.deNovo()
+    
+    
 				
 
 '''
