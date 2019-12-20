@@ -82,26 +82,6 @@ class calculadora():
 	   	print("Opa só aceitamos ""N"" ou ""S""")
 	   	return  calculadora.deNovo()
     
-    
-				
- 
-'''
-possibilidade de importar cada metodo separadamente
- 
-print ("digite o primeiro valor ")
-valor1 = calculadora.validarValor()
-		
-print ("Digite o segundo valor  ")
-valor2 = calculadora.validarValor()
- 
-print ("Escolha um dos operador (x,+,-,÷)")
-operador = input("")
-calculadora.validarOperador(operador)
-print (operador)
-		
-calculadora.calcular(valor1,valor2,operador)
-calculadora.deNovo()
-'''
  
  
 if (__name__ == '__main__'):
