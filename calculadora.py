@@ -74,6 +74,7 @@ class calculadora():
 
 '''
 possibilidade de importar cada metodo separadamente
+
 print ("digite o primeiro valor ")
 valor1 = calculadora.validarValor()
 		
