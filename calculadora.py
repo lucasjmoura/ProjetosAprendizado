@@ -1,12 +1,21 @@
+#Biblioteca de parâmetros e funções específicos do sistema
+import sys
+
 #classe calculadora, com todas as funções pertinentes a mesma
 class calculadora():
+    
+    #Apresentação do programa e suas funções
+	def apresentacao():
+		print("Este programa desenpenha a função de uma calculadora simples com quatro operacões: Multiplicação, Divisão, Adição e Divisão. \nVamos nessa? \n(""S"" para SIM ""N"" para Não)")
+		calculadora.deNovo()
+		
 	#função para gerenciar modulo
 	def main():
 		print ("Digite o primeiro valor ")
 		valor1 = calculadora.validarValor()
 		
 		
-		print ("Digite o primeiro valor ")
+		print ("Digite o segundo valor ")
 		valor2 = calculadora.validarValor()
 		
 		print ("Escolha um dos operador: \nMulitplicação = * \nSoma = + \nSubtração = - \nDivisão = /")
@@ -64,25 +73,27 @@ class calculadora():
 	def deNovo():
 	   calculoDeNovo = input("")
 	   if calculoDeNovo.upper() == 'S':
-	       return calculadora.main()
+	   	print("Então vamos lá")
+	   	return calculadora.main()
 	   elif calculoDeNovo.upper() == 'N':
-	      return print('Tudo bem até a proxima!')
+	      print('Tudo bem até a proxima!')
+	      return sys.exit()
 	   else:
 	   	print("Opa só aceitamos ""N"" ou ""S""")
 	   	return  calculadora.deNovo()
     
     
 				
-
+ 
 '''
 possibilidade de importar cada metodo separadamente
-
+ 
 print ("digite o primeiro valor ")
 valor1 = calculadora.validarValor()
 		
 print ("Digite o segundo valor  ")
 valor2 = calculadora.validarValor()
-
+ 
 print ("Escolha um dos operador (x,+,-,÷)")
 operador = input("")
 calculadora.validarOperador(operador)
@@ -91,7 +102,8 @@ print (operador)
 calculadora.calcular(valor1,valor2,operador)
 calculadora.deNovo()
 '''
-
-
+ 
+ 
 if (__name__ == '__main__'):
+	calculadora.apresentacao()
 	calculadora.main()
