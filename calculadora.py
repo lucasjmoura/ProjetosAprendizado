@@ -4,7 +4,7 @@ quatro operações.
 
 autor lucas jesus de moura
 lucas.j.m@outlook.com 
-versão: 0.0.2
+versão: 0.0.3
  
 """
 '''
